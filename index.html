@@ -499,29 +499,29 @@
         <form class="booking-form reveal" form action="https://formsubmit.co/booking@thedetailers.ca" method="POST">
           <div class="form-group full">
             <label for="name">Full Name</label>
-            <input id="name" type="text" placeholder="Your full name" required />
+            <input id="name" type="text" name="email" placeholder="Your full name" required />
           </div>
 
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input id="phone" type="tel" placeholder="Your phone number" required />
+            <input id="phone" type="tel" placeholder="Your phone number" required name="email" />
           </div>
 
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Your email address" required />
+            <input id="email" type="email" name="email" placeholder="Your email address" required />
           </div>
 
           <div class="form-group full">
             <label for="service">Service Needed</label>
             <select id="service" required>
-              <option value="">Choose a service</option>
-              <option value="car-basic">Basic Mobile Car Wash</option>
-              <option value="car-premium">Premium Mobile Car Wash</option>
-              <option value="car-detail">Ultimate Auto Detailing</option>
-              <option value="home-standard">Standard Home Cleaning</option>
-              <option value="home-deep">Deep Home Cleaning</option>
-              <option value="home-move">Move-In / Move-Out Cleaning</option>
+              <option name="email" value="">Choose a service</option>
+              <option name="email" value="car-basic">Basic Mobile Car Wash</option>
+              <option name="email" value="car-premium">Premium Mobile Car Wash</option>
+              <option name="email" value="car-detail">Ultimate Auto Detailing</option>
+              <option name="email" value="home-standard">Standard Home Cleaning</option>
+              <option name="email" value="home-deep">Deep Home Cleaning</option>
+              <option name="email" value="home-move">Move-In / Move-Out Cleaning</option>
             </select>
           </div>
 
@@ -533,25 +533,25 @@
               <div class="form-group">
                 <label for="vehicleType">Vehicle Type</label>
                 <select id="vehicleType">
-                  <option value="">Select vehicle type</option>
-                  <option>Sedan</option>
-                  <option>SUV</option>
-                  <option>Truck</option>
-                  <option>Van</option>
-                  <option>Other</option>
+                  <option name="email" value="">Select vehicle type</option>
+                  <option name="email" >Sedan</option>
+                  <option name="email" >SUV</option>
+                  <option name="email" >Truck</option>
+                  <option name="email" >Van</option>
+                  <option name="email" >Other</option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label for="vehicleCondition">Vehicle Condition</label>
                 <select id="vehicleCondition">
-                  <option value="">Select condition</option>
-                  <option>Light dirt</option>
-                  <option>Moderate dirt</option>
-                  <option>Heavy dirt</option>
-                  <option>Salt stains</option>
-                  <option>Pet hair</option>
-                  <option>Stains / spills</option>
+                  <option value="" name="email" >Select condition</option>
+                  <option name="email" >Light dirt</option>
+                  <option name="email" >Moderate dirt</option>
+                  <option name="email" >Heavy dirt</option>
+                  <option name="email" >Salt stains</option>
+                  <option name="email" >Pet hair</option>
+                  <option name="email" >Stains / spills</option>
                 </select>
               </div>
 
@@ -574,46 +574,46 @@
               <div class="form-group">
                 <label for="propertyType">Property Type</label>
                 <select id="propertyType">
-                  <option value="">Select property type</option>
-                  <option>House</option>
-                  <option>Apartment</option>
-                  <option>Condo</option>
-                  <option>Basement</option>
-                  <option>Rental Unit</option>
+                  <option value="" name="email" >Select property type</option>
+                  <option name="email" >House</option>
+                  <option name="email" >Apartment</option>
+                  <option name="email" >Condo</option>
+                  <option name="email" >Basement</option>
+                  <option name="email" >Rental Unit</option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label for="homeSize">Home Size</label>
                 <select id="homeSize">
-                  <option value="">Select home size</option>
-                  <option>Studio / Bachelor</option>
-                  <option>1 Bedroom</option>
-                  <option>2 Bedrooms</option>
-                  <option>3 Bedrooms</option>
-                  <option>4+ Bedrooms</option>
+                  <option value="" name="email" >Select home size</option>
+                  <option name="email" >Studio / Bachelor</option>
+                  <option name="email" >1 Bedroom</option>
+                  <option name="email" >2 Bedrooms</option>
+                  <option name="email" >3 Bedrooms</option>
+                  <option name="email" >4+ Bedrooms</option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label for="bathrooms">Bathrooms</label>
                 <select id="bathrooms">
-                  <option value="">Select bathrooms</option>
-                  <option>1 Bathroom</option>
-                  <option>2 Bathrooms</option>
-                  <option>3 Bathrooms</option>
-                  <option>4+ Bathrooms</option>
+                  <option value="" name="email" >Select bathrooms</option>
+                  <option name="email" >1 Bathroom</option>
+                  <option name="email" >2 Bathrooms</option>
+                  <option name="email" >3 Bathrooms</option>
+                  <option name="email" >4+ Bathrooms</option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label for="frequency">Cleaning Frequency</label>
                 <select id="frequency">
-                  <option value="">Select frequency</option>
-                  <option>One-time cleaning</option>
-                  <option>Weekly</option>
-                  <option>Biweekly</option>
-                  <option>Monthly</option>
+                  <option value="" name="email" >Select frequency</option>
+                  <option name="email" >One-time cleaning</option>
+                  <option name="email" >Weekly</option>
+                  <option name="email" >Biweekly</option>
+                  <option name="email" >Monthly</option>
                 </select>
               </div>
 
@@ -630,29 +630,29 @@
 
           <div class="form-group full">
             <label for="address">Service Address / Location</label>
-            <input id="address" type="text" placeholder="Hamilton, Ontario..." required />
+            <input id="address" name="email" type="text" placeholder="Hamilton, Ontario..." required />
           </div>
 
           <div class="form-group">
             <label for="date">Preferred Date</label>
-            <input id="date" type="date" required />
+            <input id="date" name="email" type="date" required />
           </div>
 
           <div class="form-group">
             <label for="time">Preferred Time</label>
-            <input id="time" type="time" required />
+            <input id="time" type="time" name="email" required />
           </div>
 
           <div class="form-group full">
             <label for="notes">Extra Notes</label>
-            <textarea
+            <textarea  name="email" 
               id="notes"
               rows="4"
               placeholder="Anything else we should know?"
             ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary ripple full">
+          <button  name="email" type="submit" class="btn btn-primary ripple full">
             Submit Booking Request
           </button>
 
@@ -728,10 +728,10 @@
           <p><i class="fa-solid fa-clock"></i> Business Hours: <strong>Monday to Sunday — By Appointment</strong></p>
 
           <div class="socials">
-            <a href="https://www.facebook.com/profile.php?id=61589186361149" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><p>Check our Facebook page for our works!!!</p>
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <p>Check our Facebook page for our works!!!</p><a href="https://www.facebook.com/profile.php?id=61589186361149" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+           <!-- <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          </div>
+          !--></div>
         </div>
 
         <div class="map-card reveal">
