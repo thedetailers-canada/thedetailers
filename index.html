@@ -484,181 +484,173 @@
       </div>
     </section>
 
-    <!-- Booking -->
-    <section id="booking" class="section booking-section">
-      <div class="container booking-grid">
-        <div class="booking-content reveal">
-          <p class="eyebrow">Book Now</p>
-          <h2>Request your cleaning appointment.</h2>
-          <p>
-            Fill out the form and The Detailers will contact you to confirm
-            your service, final price, date, and time.
-          </p>
-        </div>
+  <form class="booking-form reveal" action="https://formsubmit.co/booking@thedetailers.ca" method="POST">
 
-        <form class="booking-form reveal" form action="https://formsubmit.co/booking@thedetailers.ca" method="POST">
-          <div class="form-group full">
-            <label for="name">Full Name</label>
-            <input id="name" type="text"   placeholder="Your full name" required />
-          </div>
+  <input type="hidden" name="_subject" value="New Booking Request - The Detailers">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
 
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input id="phone" type="tel" placeholder="Your phone number" required   />
-          </div>
+  <div class="form-group full">
+    <label for="name">Full Name</label>
+    <input id="name" name="full_name" type="text" placeholder="Your full name" required />
+  </div>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email"   placeholder="Your email address" required />
-          </div>
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input id="phone" name="phone_number" type="tel" placeholder="Your phone number" required />
+  </div>
 
-          <div class="form-group full">
-            <label for="service">Service Needed</label>
-            <select id="service" required>
-              <option   value="">Choose a service</option>
-              <option   value="car-basic">Basic Mobile Car Wash</option>
-              <option   value="car-premium">Premium Mobile Car Wash</option>
-              <option   value="car-detail">Ultimate Auto Detailing</option>
-              <option   value="home-standard">Standard Home Cleaning</option>
-              <option   value="home-deep">Deep Home Cleaning</option>
-              <option   value="home-move">Move-In / Move-Out Cleaning</option>
-            </select>
-          </div>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input id="email" name="email" type="email" placeholder="Your email address" required />
+  </div>
 
-          <!-- Vehicle Details -->
-          <div class="conditional-fields full" id="carFields">
-            <h4>Vehicle Details</h4>
+  <div class="form-group full">
+    <label for="service">Service Needed</label>
+    <select id="service" name="service_needed" required>
+      <option value="">Choose a service</option>
+      <option value="car-basic">Basic Mobile Car Wash</option>
+      <option value="car-premium">Premium Mobile Car Wash</option>
+      <option value="car-detail">Ultimate Auto Detailing</option>
+      <option value="home-standard">Standard Home Cleaning</option>
+      <option value="home-deep">Deep Home Cleaning</option>
+      <option value="home-move">Move-In / Move-Out Cleaning</option>
+    </select>
+  </div>
 
-            <div class="inner-grid">
-              <div class="form-group">
-                <label for="vehicleType">Vehicle Type</label>
-                <select id="vehicleType">
-                  <option   value="">Select vehicle type</option>
-                  <option   >Sedan</option>
-                  <option   >SUV</option>
-                  <option   >Truck</option>
-                  <option   >Van</option>
-                  <option   >Other</option>
-                </select>
-              </div>
+  <div class="conditional-fields full" id="carFields">
+    <h4>Vehicle Details</h4>
 
-              <div class="form-group">
-                <label for="vehicleCondition">Vehicle Condition</label>
-                <select id="vehicleCondition">
-                  <option value=""   >Select condition</option>
-                  <option   >Light dirt</option>
-                  <option   >Moderate dirt</option>
-                  <option   >Heavy dirt</option>
-                  <option   >Salt stains</option>
-                  <option   >Pet hair</option>
-                  <option   >Stains / spills</option>
-                </select>
-              </div>
-
-              <div class="form-group full">
-                <label for="carDetails">Car Details</label>
-                <textarea
-                  id="carDetails"
-                  rows="3"
-                  placeholder="Example: pet hair, salt stains, dirty mats, seat stains..."
-                ></textarea>
-              </div>
-            </div>
-          </div>
-
-          <!-- Property Details -->
-          <div class="conditional-fields full" id="homeFields">
-            <h4>Property Details</h4>
-
-            <div class="inner-grid">
-              <div class="form-group">
-                <label for="propertyType">Property Type</label>
-                <select id="propertyType">
-                  <option value=""   >Select property type</option>
-                  <option   >House</option>
-                  <option   >Apartment</option>
-                  <option   >Condo</option>
-                  <option   >Basement</option>
-                  <option   >Rental Unit</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="homeSize">Home Size</label>
-                <select id="homeSize">
-                  <option value=""   >Select home size</option>
-                  <option   >Studio / Bachelor</option>
-                  <option   >1 Bedroom</option>
-                  <option   >2 Bedrooms</option>
-                  <option   >3 Bedrooms</option>
-                  <option   >4+ Bedrooms</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="bathrooms">Bathrooms</label>
-                <select id="bathrooms">
-                  <option value=""   >Select bathrooms</option>
-                  <option   >1 Bathroom</option>
-                  <option   >2 Bathrooms</option>
-                  <option   >3 Bathrooms</option>
-                  <option   >4+ Bathrooms</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="frequency">Cleaning Frequency</label>
-                <select id="frequency">
-                  <option value=""   >Select frequency</option>
-                  <option   >One-time cleaning</option>
-                  <option   >Weekly</option>
-                  <option   >Biweekly</option>
-                  <option   >Monthly</option>
-                </select>
-              </div>
-
-              <div class="form-group full">
-                <label for="propertyDetails">Property Details</label>
-                <textarea
-                  id="propertyDetails"
-                  rows="3"
-                  placeholder="Example: kitchen, bathrooms, basement, move-out cleaning, deep clean needed..."
-                ></textarea>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group full">
-            <label for="address">Service Address / Location</label>
-            <input id="address"   type="text" placeholder="Hamilton, Ontario..." required />
-          </div>
-
-          <div class="form-group">
-            <label for="date">Preferred Date</label>
-            <input id="date"   type="date" required />
-          </div>
-
-          <div class="form-group">
-            <label for="time">Preferred Time</label>
-            <input id="time" type="time"   required />
-          </div>
-
-          <div class="form-group full">
-            <label for="notes">Extra Notes</label>
-            <textarea    
-              id="notes"
-              rows="4"
-              placeholder="Anything else we should know?"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary ripple full">
-            Submit Booking Request
-          </button>
-
-        </form>
+    <div class="inner-grid">
+      <div class="form-group">
+        <label for="vehicleType">Vehicle Type</label>
+        <select id="vehicleType" name="vehicle_type">
+          <option value="">Select vehicle type</option>
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Truck</option>
+          <option>Van</option>
+          <option>Other</option>
+        </select>
       </div>
-    </section>
+
+      <div class="form-group">
+        <label for="vehicleCondition">Vehicle Condition</label>
+        <select id="vehicleCondition" name="vehicle_condition">
+          <option value="">Select condition</option>
+          <option>Light dirt</option>
+          <option>Moderate dirt</option>
+          <option>Heavy dirt</option>
+          <option>Salt stains</option>
+          <option>Pet hair</option>
+          <option>Stains / spills</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label for="carDetails">Car Details</label>
+        <textarea
+          id="carDetails"
+          name="car_details"
+          rows="3"
+          placeholder="Example: pet hair, salt stains, dirty mats, seat stains..."
+        ></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="conditional-fields full" id="homeFields">
+    <h4>Property Details</h4>
+
+    <div class="inner-grid">
+      <div class="form-group">
+        <label for="propertyType">Property Type</label>
+        <select id="propertyType" name="property_type">
+          <option value="">Select property type</option>
+          <option>House</option>
+          <option>Apartment</option>
+          <option>Condo</option>
+          <option>Basement</option>
+          <option>Rental Unit</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="homeSize">Home Size</label>
+        <select id="homeSize" name="home_size">
+          <option value="">Select home size</option>
+          <option>Studio / Bachelor</option>
+          <option>1 Bedroom</option>
+          <option>2 Bedrooms</option>
+          <option>3 Bedrooms</option>
+          <option>4+ Bedrooms</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bathrooms">Bathrooms</label>
+        <select id="bathrooms" name="bathrooms">
+          <option value="">Select bathrooms</option>
+          <option>1 Bathroom</option>
+          <option>2 Bathrooms</option>
+          <option>3 Bathrooms</option>
+          <option>4+ Bathrooms</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="frequency">Cleaning Frequency</label>
+        <select id="frequency" name="cleaning_frequency">
+          <option value="">Select frequency</option>
+          <option>One-time cleaning</option>
+          <option>Weekly</option>
+          <option>Biweekly</option>
+          <option>Monthly</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label for="propertyDetails">Property Details</label>
+        <textarea
+          id="propertyDetails"
+          name="property_details"
+          rows="3"
+          placeholder="Example: kitchen, bathrooms, basement, move-out cleaning, deep clean needed..."
+        ></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group full">
+    <label for="address">Service Address / Location</label>
+    <input id="address" name="service_address" type="text" placeholder="Hamilton, Ontario..." required />
+  </div>
+
+  <div class="form-group">
+    <label for="date">Preferred Date</label>
+    <input id="date" name="preferred_date" type="date" required />
+  </div>
+
+  <div class="form-group">
+    <label for="time">Preferred Time</label>
+    <input id="time" name="preferred_time" type="time" required />
+  </div>
+
+  <div class="form-group full">
+    <label for="notes">Extra Notes</label>
+    <textarea
+      id="notes"
+      name="extra_notes"
+      rows="4"
+      placeholder="Anything else we should know?"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary ripple full">
+    Submit Booking Request
+  </button>
+
+</form>
 
     <!-- FAQ -->
     <section class="section faq-section">
