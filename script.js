@@ -138,23 +138,3 @@ serviceSelect.addEventListener("change", () => {
     homeFields.classList.add("show");
   }
 });
-
-// Booking Form Demo Behavior
-const bookingForm = document.querySelector(".booking-form");
-const formMessage = document.querySelector(".form-message");
-
-bookingForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  formMessage.textContent =
-    "Thank you! The Detailers has received your booking request. We will contact you shortly to confirm your service.";
-
-  bookingForm.reset();
-
-  carFields.classList.remove("show");
-  homeFields.classList.remove("show");
-
-  setTimeout(() => {
-    formMessage.textContent = "";
-  }, 6000);
-});
