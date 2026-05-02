@@ -1830,7 +1830,7 @@ strong {
   align-items: flex-end;
   background:
     linear-gradient(135deg, rgba(7, 11, 20, 0.83), rgba(11, 116, 255, 0.48)),
-    url("https://kommodo.ai/i/QLkXOZVmk89vrMORIHcI");
+    url("./1.jpeg");
   background-size: cover;
   background-position: center;
   box-shadow: var(--soft-shadow);
@@ -1845,7 +1845,7 @@ strong {
   align-items: flex-end;
   background:
     linear-gradient(135deg, rgba(7, 11, 20, 0.83), rgba(11, 116, 255, 0.48)),
-    url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80");
+    url("./2.jpeg");
   background-size: cover;
   background-position: center;
   box-shadow: var(--soft-shadow);
@@ -1859,7 +1859,7 @@ strong {
   align-items: flex-end;
   background:
     linear-gradient(135deg, rgba(7, 11, 20, 0.83), rgba(11, 116, 255, 0.48)),
-    url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80");
+    url("./3.jpeg");
   background-size: cover;
   background-position: center;
   box-shadow: var(--soft-shadow);
@@ -1873,7 +1873,7 @@ strong {
   align-items: flex-end;
   background:
     linear-gradient(135deg, rgba(7, 11, 20, 0.83), rgba(11, 116, 255, 0.48)),
-    url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80");
+    url("./4.jpeg");
   background-size: cover;
   background-position: center;
   box-shadow: var(--soft-shadow);
