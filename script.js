@@ -53,7 +53,6 @@ document.querySelectorAll("a, button, .service-card, .pricing-card, .why-card").
 });
 
 
-
 // Button Ripple Animation
 document.querySelectorAll(".ripple").forEach((button) => {
   button.addEventListener("click", function (event) {
