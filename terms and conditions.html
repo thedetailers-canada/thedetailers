@@ -13,9 +13,83 @@
 h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1;max-width:930px;margin-bottom:20px} .hero p{max-width:860px;color:rgba(255,255,255,.84);font-size:1.08rem} .container{max-width:1100px;margin:-45px auto 70px;padding:0 20px;position:relative;z-index:2}
 .notice,.card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:clamp(22px,4vw,38px);box-shadow:var(--shadow);margin-bottom:24px} .notice{background:#fff8f8;border-left:6px solid var(--red)} h2{color:var(--black);font-size:clamp(1.5rem,3vw,2.05rem);margin-bottom:16px;line-height:1.15} h3{color:var(--black);margin:22px 0 10px;font-size:1.18rem} p{margin-bottom:14px} ul,ol{margin:12px 0 18px 22px} li{margin-bottom:8px} .toc{columns:2}
 .footer{text-align:center;padding:34px 20px;background:var(--black);color:white} .footer p{color:rgba(255,255,255,.75);margin:4px 0} @media(max-width:720px){.toc{columns:1}.nav{flex-direction:column}.container{margin-top:-30px}.hero{padding:70px 20px}}
+
+    
+    .cursor-ring {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  border: none !important;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 120, 255, 0.95) 0%,
+    rgba(0, 120, 255, 0.75) 22%,
+    rgba(255, 49, 49, 0.70) 52%,
+    rgba(255, 49, 49, 0.35) 75%,
+    transparent 100%
+  );
+  filter: blur(18px) saturate(180%);
+  opacity: 0.95;
+  mix-blend-mode: exclusion;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    filter 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.cursor-ring.hover {
+  width: 165px;
+  height: 165px;
+  filter: blur(22px) saturate(220%);
+  opacity: 1;
+}
+
+
 </style>
+<script>
+
+    const cursorRing = document.querySelector(".cursor-ring");
+
+let mouseX = 0;
+let mouseY = 0;
+let ringX = 0;
+let ringY = 0;
+
+window.addEventListener("mousemove", (event) => {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+});
+
+function animateCursor() {
+  ringX += (mouseX - ringX) * 0.14;
+  ringY += (mouseY - ringY) * 0.14;
+
+  cursorRing.style.left = `${ringX}px`;
+  cursorRing.style.top = `${ringY}px`;
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+document.querySelectorAll("a, button, .service-card, .pricing-card, .why-card").forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    cursorRing.classList.add("hover");
+  });
+
+  item.addEventListener("mouseleave", () => {
+    cursorRing.classList.remove("hover");
+  });
+});
+    </script>
 </head>
 <body>
+    <div class="cursor-ring"></div>
 <div class="top-bar">The Detailers — Auto Detailing and Residential Cleaning</div>
 <header class="header"><nav class="nav"><a class="logo" href="https://thedetailers.ca"><span>The</span> Detailers</a><div class="nav-info">thedetailers.ca | +1 (365) 357-3403</div></nav></header>
 <section class="hero"><div class="hero-inner"><span class="badge">Expanded Terms and Conditions</span><h1>Service Terms, Refund Policy, Liability Notice, Customer Agreement, and Legal Reference Notes</h1><p>This is an intentionally long business template for The Detailers. It is not legal advice and should be reviewed by a qualified Ontario lawyer before publication. Nothing here removes rights or responsibilities that cannot be waived under Ontario or Canadian law.</p></div></section>
