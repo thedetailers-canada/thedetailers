@@ -367,53 +367,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-  :root {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --card-color: #f5f5f5;
-  --accent-color: #d60000;
-}
-
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-body.dark-mode {
-  --bg-color: #050505;
-  --text-color: #ffffff;
-  --card-color: #111111;
-  --accent-color: #ff1e1e;
-}
-
-.card,
-section,
-footer {
-  background: var(--card-color);
-  color: var(--text-color);
-}
-
-.theme-toggle {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 30px;
-  background: var(--accent-color);
-  color: white;
-  cursor: pointer;
-  z-index: 9999;
-}
 </style>
 </head>
 
@@ -443,7 +396,7 @@ footer {
         <li><a href="#booking" class="nav-cta">Book Now</a></li>
       </ul>
     </nav>
-    <button id="themeToggle" class="theme-toggle">🌙 Page Mode</button>
+  
   </header>
 
   <main>
@@ -1275,36 +1228,6 @@ document.addEventListener("DOMContentLoaded", function () {
         submitBtn.textContent = "Submit Booking Request";
       }
     });
-  });
-
-
-
-
-
-
-
-
-
-
-
-  
-  const themeToggle = document.getElementById("themeToggle");
-
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    themeToggle.textContent = "☀️ Light Mode";
-  }
-
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-      themeToggle.textContent = "☀️ Light Mode";
-    } else {
-      localStorage.setItem("theme", "light");
-      themeToggle.textContent = "🌙 Dark Mode";
-    }
   });
 
 </script>
