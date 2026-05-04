@@ -17,8 +17,7 @@ document.querySelectorAll(".nav-menu a").forEach((link) => {
 // Footer Year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Cursor Follow Animation
-const cursorDot = document.querySelector(".cursor-dot");
+//Cursor
 const cursorRing = document.querySelector(".cursor-ring");
 
 let mouseX = 0;
@@ -29,9 +28,6 @@ let ringY = 0;
 window.addEventListener("mousemove", (event) => {
   mouseX = event.clientX;
   mouseY = event.clientY;
-
-  cursorDot.style.left = `${mouseX}px`;
-  cursorDot.style.top = `${mouseY}px`;
 });
 
 function animateCursor() {
@@ -55,6 +51,8 @@ document.querySelectorAll("a, button, .service-card, .pricing-card, .why-card").
     cursorRing.classList.remove("hover");
   });
 });
+
+
 
 // Button Ripple Animation
 document.querySelectorAll(".ripple").forEach((button) => {
