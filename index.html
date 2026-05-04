@@ -144,6 +144,22 @@
 <style>
 
   .td-booking-section {
+  position: relative;
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+.td-booking-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(900px, 90%);
+  height: 1px;
+  background: #d6d6d6;
+}
+  .td-booking-section {
   padding: 90px 20px;
   background: #f7f7f7;
   color: #111111;
