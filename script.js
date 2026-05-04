@@ -119,22 +119,4 @@ faqItems.forEach((item) => {
   });
 });
 
-// Conditional Booking Fields
-const serviceSelect = document.getElementById("service");
-const carFields = document.getElementById("carFields");
-const homeFields = document.getElementById("homeFields");
 
-serviceSelect.addEventListener("change", () => {
-  const selectedService = serviceSelect.value;
-
-  carFields.classList.remove("show");
-  homeFields.classList.remove("show");
-
-  if (selectedService.startsWith("car")) {
-    carFields.classList.add("show");
-  }
-
-  if (selectedService.startsWith("home")) {
-    homeFields.classList.add("show");
-  }
-});
