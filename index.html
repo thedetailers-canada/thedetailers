@@ -119,7 +119,6 @@
     ]
   }
 }
-  <script>
   const tdService = document.getElementById("tdService");
   const tdCarFields = document.getElementById("tdCarFields");
   const tdHomeFields = document.getElementById("tdHomeFields");
@@ -144,6 +143,33 @@
   tdBookingForm.addEventListener("submit", function () {
     tdFormMessage.textContent = "Submitting your booking request...";
   });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const tdService = document.getElementById("tdService");
+  const tdCarFields = document.getElementById("tdCarFields");
+  const tdHomeFields = document.getElementById("tdHomeFields");
+
+  if (!tdService || !tdCarFields || !tdHomeFields) {
+    console.log("Booking form IDs not found");
+    return;
+  }
+
+  tdService.addEventListener("change", function () {
+    const selected = this.value;
+
+    tdCarFields.style.display = "none";
+    tdHomeFields.style.display = "none";
+
+    if (selected.includes("car")) {
+      tdCarFields.style.display = "block";
+    }
+
+    if (selected.includes("home")) {
+      tdHomeFields.style.display = "block";
+    }
+  });
+});
 </script>
 <style>
 
