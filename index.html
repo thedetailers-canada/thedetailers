@@ -119,54 +119,24 @@
     ]
   }
 }
-  const tdService = document.getElementById("tdService");
-  const tdCarFields = document.getElementById("tdCarFields");
-  const tdHomeFields = document.getElementById("tdHomeFields");
-  const tdBookingForm = document.getElementById("tdBookingForm");
-  const tdFormMessage = document.getElementById("tdFormMessage");
 
-  tdService.addEventListener("change", function () {
-    const selected = this.value;
-
-    tdCarFields.style.display = "none";
-    tdHomeFields.style.display = "none";
-
-    if (selected.startsWith("car")) {
-      tdCarFields.style.display = "block";
-    }
-
-    if (selected.startsWith("home")) {
-      tdHomeFields.style.display = "block";
-    }
-  });
-
-  tdBookingForm.addEventListener("submit", function () {
-    tdFormMessage.textContent = "Submitting your booking request...";
-  });
 
 
   document.addEventListener("DOMContentLoaded", function () {
-  const tdService = document.getElementById("tdService");
-  const tdCarFields = document.getElementById("tdCarFields");
-  const tdHomeFields = document.getElementById("tdHomeFields");
+  const service = document.getElementById("tdService");
+  const carFields = document.getElementById("tdCarFields");
+  const homeFields = document.getElementById("tdHomeFields");
 
-  if (!tdService || !tdCarFields || !tdHomeFields) {
-    console.log("Booking form IDs not found");
-    return;
-  }
+  service.addEventListener("change", function () {
+    carFields.style.display = "none";
+    homeFields.style.display = "none";
 
-  tdService.addEventListener("change", function () {
-    const selected = this.value;
-
-    tdCarFields.style.display = "none";
-    tdHomeFields.style.display = "none";
-
-    if (selected.includes("car")) {
-      tdCarFields.style.display = "block";
+    if (this.value.startsWith("car-")) {
+      carFields.style.display = "block";
     }
 
-    if (selected.includes("home")) {
-      tdHomeFields.style.display = "block";
+    if (this.value.startsWith("home-")) {
+      homeFields.style.display = "block";
     }
   });
 });
@@ -193,8 +163,8 @@
 .td-booking-left,
 .td-booking-form {
   border-radius: 28px;
-  background: white;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: black;
+  border: 1px solid grey;
   backdrop-filter: blur(18px);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
 }
