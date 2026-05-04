@@ -339,42 +339,44 @@
   transform: translate(-50%, -50%);
 }
 
+/* remove the blue dot */
 .cursor-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #111111;
-  box-shadow:
-    0 0 18px rgba(0, 102, 255, 0.2),
-    0 0 24px rgba(255, 49, 49, 0.2);
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
+/* glow only, no visible circle border */
 .cursor-ring {
-  width: 42px;
-  height: 42px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 102, 255, 0.35);
-  box-shadow:
-    0 0 25px rgba(0, 102, 255, 0.2),
-    0 0 35px rgba(255, 49, 49, 0.2),
-    inset 0 0 18px rgba(255, 255, 255, 0.12);
-  transition:
-    width 0.25s ease,
-    height 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  border: none;
+  background: radial-gradient(
+    circle,
+    rgba(0, 102, 255, 0.20) 0%,
+    rgba(0, 102, 255, 0.14) 25%,
+    rgba(255, 49, 49, 0.12) 55%,
+    rgba(255, 49, 49, 0.04) 80%,
+    transparent 100%
+  );
+  filter: blur(10px);
+  opacity: 1;
+  transition: 0.25s ease;
 }
 
 .cursor-ring.hover {
-  width: 62px;
-  height: 62px;
-  border-color: rgba(255, 49, 49, 0.45);
-  box-shadow:
-    0 0 35px rgba(0, 102, 255, 0.2),
-    0 0 50px rgba(255, 49, 49, 0.2),
-    inset 0 0 22px rgba(255, 255, 255, 0.16);
+  width: 95px;
+  height: 95px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 102, 255, 0.24) 0%,
+    rgba(0, 102, 255, 0.16) 25%,
+    rgba(255, 49, 49, 0.16) 60%,
+    rgba(255, 49, 49, 0.06) 85%,
+    transparent 100%
+  );
 }
-  
 </style>
 </head>
 
