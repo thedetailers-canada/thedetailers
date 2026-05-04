@@ -120,26 +120,6 @@
   }
 }
 
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-  const service = document.getElementById("tdService");
-  const carFields = document.getElementById("tdCarFields");
-  const homeFields = document.getElementById("tdHomeFields");
-
-  service.addEventListener("change", function () {
-    carFields.style.display = "none";
-    homeFields.style.display = "none";
-
-    if (this.value.startsWith("car-")) {
-      carFields.style.display = "block";
-    }
-
-    if (this.value.startsWith("home-")) {
-      homeFields.style.display = "block";
-    }
-  });
-});
 </script>
 <style>
 
@@ -347,7 +327,9 @@
     padding: 24px;
   }
 }
-  
+  .td-extra-fields {
+  display: none;
+}
 </style>
 </head>
 
@@ -901,100 +883,100 @@
         </div>
       </div>
 
-      <!-- Car Fields -->
-      <div class="td-extra-fields" id="tdCarFields">
-        <h3>Vehicle Details</h3>
+     <!-- Car Fields -->
+<div class="td-extra-fields" id="tdCarFields">
+  <h3>Vehicle Details</h3>
 
-        <div class="td-form-grid">
-          <div class="td-field">
-            <label>Vehicle Type</label>
-            <select name="Vehicle Type">
-              <option value="">Select vehicle type</option>
-              <option>Sedan</option>
-              <option>SUV</option>
-              <option>Truck</option>
-              <option>Van</option>
-              <option>Other</option>
-            </select>
-          </div>
+  <div class="td-form-grid">
+    <div class="td-field">
+      <label>Vehicle Type</label>
+      <select name="Vehicle Type">
+        <option value="">Select vehicle type</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        <option>Truck</option>
+        <option>Van</option>
+        <option>Other</option>
+      </select>
+    </div>
 
-          <div class="td-field">
-            <label>Vehicle Condition</label>
-            <select name="Vehicle Condition">
-              <option value="">Select condition</option>
-              <option>Light dirt</option>
-              <option>Moderate dirt</option>
-              <option>Heavy dirt</option>
-              <option>Salt stains</option>
-              <option>Pet hair</option>
-              <option>Stains / spills</option>
-            </select>
-          </div>
-        </div>
+    <div class="td-field">
+      <label>Vehicle Condition</label>
+      <select name="Vehicle Condition">
+        <option value="">Select condition</option>
+        <option>Light dirt</option>
+        <option>Moderate dirt</option>
+        <option>Heavy dirt</option>
+        <option>Salt stains</option>
+        <option>Pet hair</option>
+        <option>Stains / spills</option>
+      </select>
+    </div>
+  </div>
 
-        <div class="td-field">
-          <label>Car Details</label>
-          <textarea name="Car Details" rows="3" placeholder="Example: pet hair, salt stains, dirty mats, seat stains..."></textarea>
-        </div>
-      </div>
+  <div class="td-field">
+    <label>Car Details</label>
+    <textarea name="Car Details" rows="3" placeholder="Example: pet hair, salt stains, dirty mats, seat stains..."></textarea>
+  </div>
+</div>
 
-      <!-- Home Fields -->
-      <div class="td-extra-fields" id="tdHomeFields">
-        <h3>Property Details</h3>
+<!-- Home Fields -->
+<div class="td-extra-fields" id="tdHomeFields">
+  <h3>Property Details</h3>
 
-        <div class="td-form-grid">
-          <div class="td-field">
-            <label>Property Type</label>
-            <select name="Property Type">
-              <option value="">Select property type</option>
-              <option>House</option>
-              <option>Apartment</option>
-              <option>Condo</option>
-              <option>Basement</option>
-              <option>Rental Unit</option>
-            </select>
-          </div>
+  <div class="td-form-grid">
+    <div class="td-field">
+      <label>Property Type</label>
+      <select name="Property Type">
+        <option value="">Select property type</option>
+        <option>House</option>
+        <option>Apartment</option>
+        <option>Condo</option>
+        <option>Basement</option>
+        <option>Rental Unit</option>
+      </select>
+    </div>
 
-          <div class="td-field">
-            <label>Home Size</label>
-            <select name="Home Size">
-              <option value="">Select home size</option>
-              <option>Studio / Bachelor</option>
-              <option>1 Bedroom</option>
-              <option>2 Bedrooms</option>
-              <option>3 Bedrooms</option>
-              <option>4+ Bedrooms</option>
-            </select>
-          </div>
+    <div class="td-field">
+      <label>Home Size</label>
+      <select name="Home Size">
+        <option value="">Select home size</option>
+        <option>Studio / Bachelor</option>
+        <option>1 Bedroom</option>
+        <option>2 Bedrooms</option>
+        <option>3 Bedrooms</option>
+        <option>4+ Bedrooms</option>
+      </select>
+    </div>
 
-          <div class="td-field">
-            <label>Bathrooms</label>
-            <select name="Bathrooms">
-              <option value="">Select bathrooms</option>
-              <option>1 Bathroom</option>
-              <option>2 Bathrooms</option>
-              <option>3 Bathrooms</option>
-              <option>4+ Bathrooms</option>
-            </select>
-          </div>
+    <div class="td-field">
+      <label>Bathrooms</label>
+      <select name="Bathrooms">
+        <option value="">Select bathrooms</option>
+        <option>1 Bathroom</option>
+        <option>2 Bathrooms</option>
+        <option>3 Bathrooms</option>
+        <option>4+ Bathrooms</option>
+      </select>
+    </div>
 
-          <div class="td-field">
-            <label>Cleaning Frequency</label>
-            <select name="Cleaning Frequency">
-              <option value="">Select frequency</option>
-              <option>One-time cleaning</option>
-              <option>Weekly</option>
-              <option>Biweekly</option>
-              <option>Monthly</option>
-            </select>
-          </div>
-        </div>
+    <div class="td-field">
+      <label>Cleaning Frequency</label>
+      <select name="Cleaning Frequency">
+        <option value="">Select frequency</option>
+        <option>One-time cleaning</option>
+        <option>Weekly</option>
+        <option>Biweekly</option>
+        <option>Monthly</option>
+      </select>
+    </div>
+  </div>
 
-        <div class="td-field">
-          <label>Property Details</label>
-          <textarea name="Property Details" rows="3" placeholder="Example: kitchen, bathrooms, basement, move-out cleaning, deep clean needed..."></textarea>
-        </div>
-      </div>
+  <div class="td-field">
+    <label>Property Details</label>
+    <textarea name="Property Details" rows="3" placeholder="Example: kitchen, bathrooms, basement, move-out cleaning, deep clean needed..."></textarea>
+  </div>
+</div>
 
       <div class="td-form-grid">
         <div class="td-field">
@@ -1125,7 +1107,34 @@
       <p>Mobile Car Wash Hamilton • Car Detailing Hamilton • Residential Cleaning Hamilton</p>
     </div>
   </footer>
+<script>
 
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const service = document.getElementById("tdService");
+      const carFields = document.getElementById("tdCarFields");
+      const homeFields = document.getElementById("tdHomeFields");
+
+      function updateBookingFields() {
+        carFields.style.display = "none";
+        homeFields.style.display = "none";
+
+        if (service.value.startsWith("car-")) {
+          carFields.style.display = "block";
+        }
+
+        if (service.value.startsWith("home-")) {
+          homeFields.style.display = "block";
+        }
+      }
+
+      service.addEventListener("change", updateBookingFields);
+      updateBookingFields();
+    });
+  </script>
+</body> 
+  
+</script>
   <script src="script.js"></script>
 </body>
 </html>
