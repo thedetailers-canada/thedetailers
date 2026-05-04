@@ -1108,33 +1108,53 @@
     </div>
   </footer>
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const service = document.querySelector("#tdService");
+  const carFields = document.querySelector("#tdCarFields");
+  const homeFields = document.querySelector("#tdHomeFields");
 
-   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const service = document.getElementById("tdService");
-      const carFields = document.getElementById("tdCarFields");
-      const homeFields = document.getElementById("tdHomeFields");
-
-      function updateBookingFields() {
-        carFields.style.display = "none";
-        homeFields.style.display = "none";
-
-        if (service.value.startsWith("car-")) {
-          carFields.style.display = "block";
-        }
-
-        if (service.value.startsWith("home-")) {
-          homeFields.style.display = "block";
-        }
-      }
-
-      service.addEventListener("change", updateBookingFields);
-      updateBookingFields();
+  if (!service || !carFields || !homeFields) {
+    console.log("Missing ID:", {
+      service: service,
+      carFields: carFields,
+      homeFields: homeFields
     });
-  </script>
+    return;
+  }
+
+  function showCorrectFields() {
+    const selectedOption = service.options[service.selectedIndex];
+    const value = service.value.toLowerCase();
+    const text = selectedOption.textContent.toLowerCase();
+
+    carFields.style.display = "none";
+    homeFields.style.display = "none";
+
+    if (
+      value.includes("car") ||
+      text.includes("car") ||
+      text.includes("auto") ||
+      text.includes("detailing")
+    ) {
+      carFields.style.display = "block";
+    }
+
+    if (
+      value.includes("home") ||
+      text.includes("home") ||
+      text.includes("move-in") ||
+      text.includes("move-out")
+    ) {
+      homeFields.style.display = "block";
+    }
+  }
+
+  service.addEventListener("change", showCorrectFields);
+  showCorrectFields();
+});
+</script>
 </body> 
   
-</script>
   <script src="script.js"></script>
 </body>
 </html>
